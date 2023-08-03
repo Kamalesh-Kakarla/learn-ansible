@@ -1,6 +1,6 @@
 - name: Install Nginx
-  host: web
-  task:  
+  hosts: web
+  tasks:  
     - name: Install nginx
       ansible.builtin.yum:
         name: httpd
