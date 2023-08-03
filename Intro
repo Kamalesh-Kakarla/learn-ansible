@@ -1,0 +1,26 @@
+How Ansible connects to node?
+
+Ansible uses SSH
+Ansible needs inventory
+
+After logging into the ec2 instance, you need to install the ansible with latest version and use the below commands to SSH the other instances.
+
+CMD - ansible -i instance1 IP, instance2 IP -m ping -e ansible_user=centos -e ansible_password=DevOps
+
+Ex:  ansible -i 172.31.81.142,172.31.82.209 -m ping -e ansible_user=centos -e ansible_password=DevOps or
+
+You can use the inventory file (save the above instance IP's in one file and use in the command execution)
+
+Ex:  vi inv
+
+     [web]
+     172.31.81.142 
+
+     [App]
+     172.31.82.209
+
+CMD - ansible -i inv web App -m ping -e ansible_user=centos -e ansible_password=DevOps 
+
+If you want SSH only one instance use the below command.
+
+CMD - ansible -i inv web -m ping -e ansible_user=centos -e ansible_password=DevOps
