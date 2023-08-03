@@ -8,6 +8,6 @@
         state: latest
     - name: start nginx
       ansible.builtin.systemd:
-        name: nginx
+        name: httpd
         state: started
         enabled: yes
