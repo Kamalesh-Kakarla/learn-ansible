@@ -5,7 +5,7 @@ Ansible needs inventory
 
 After logging into the ec2 instance, you need to install the ansible with latest version and use the below commands to SSH the other instances.
 
-CMD - ansible -i instance1 IP, instance2 IP -m ping -e ansible_user=centos -e ansible_password=DevOps
+CMD - ansible -i instance1 IP, instance2 IP -m ping (ansible.builtin.ping) -e ansible_user=centos -e ansible_password=DevOps
 
 Ex:  ansible -i 172.31.81.142,172.31.82.209 -m ping -e ansible_user=centos -e ansible_password=DevOps or
 
