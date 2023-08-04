@@ -12,3 +12,9 @@
         name: httpd
         state: started
         enabled: yes
+
+- name: Installing Nginx
+  become: true
+  hosts: web
+  roles:
+    - sample
