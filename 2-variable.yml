@@ -10,8 +10,8 @@
 
 #Ansible access variables with two flower brackets.
 
-- name: print task variables
-  ansible.builtin.debug:
-    msg: URL = {{URL}}
-  vars:
-    URL: tasks.google.com
+    - name: print task variables
+      ansible.builtin.debug:
+        msg: URL = {{URL}}
+      vars:
+        URL: tasks.google.com
