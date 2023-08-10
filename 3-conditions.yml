@@ -4,7 +4,7 @@
   vars:
     fruit: true
     vegitable: false
-  taks:
+  tasks:
     - name: Print fruit Name
       ansible.builtin.debug:
         msg: Fruit name - Apple
